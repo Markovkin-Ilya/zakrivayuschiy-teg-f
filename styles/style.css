@@ -13,4 +13,81 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: "wght"(var(--main-text-weight));
+  background-image: url(../images/background.png);
+  background-repeat: repeat-x;
+}
+
+.header {
+  background-size: cover;
+  box-sizing: border-box;
+  font-size: clamp(49px, 7vw, 64px);
+}
+
+.header-title {
+  font-family: var(--accent-font);
+  border: 2px solid #000;
+  background-color: #fff;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: clamp(120px, 2.3em, 130px);
+  padding-bottom: 105px;
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1em;
+}
+
+.header-title-strong {
+  font-size: clamp(49px, 7vw, 64px);
+}
+
+.header-title-weak {
+  font-size: clamp(14px, 2.5vw, 23px);
+  text-transform: uppercase;
+}
+
+.card {
+  border: 2px solid #000;
+  background-color: #fff;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.card-title {
+  font-weight: var(--card-titele-weight);
+  font-size: var(--card-titele-size);
+  padding: 5px 10px;
+}
+
+.card-img {
+  inline-size: 100%;
+  background-size: cover;
+}
+
+.card-text {
+  padding: 25px 25px 0 25px;
+  font-size: var(--card-text-size);
+}
+
+.card-interaction {
+  display: flex;
+  justify-content: end;
+  margin: 25px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: auto;
+}
+
+.card__like-button {
+  background-color: transparent;
+  border: 3px solid #000;
+  font-family: var(--accent-font);
+  padding: 10px 35px;
+  font-size: 14px;
 }
