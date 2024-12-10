@@ -9,6 +9,8 @@
     --card-titele-weight: 700;
     --card-titele-size: 18px;
     --card-text-size: 18px;
-    --card-picture-color: #fff;
+    --main-color: #fff;
     --accent-color: #000;
+    --contur-color: #000;
+    --fill-color: #f00;
 }
