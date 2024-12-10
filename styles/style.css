@@ -10,13 +10,23 @@
 
 */
 
+@keyframes full {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 100%;
+  }
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
   font-variation-settings: "wght"(var(--main-text-weight));
-  background-image: url(../images/background.png);
-  background-repeat: repeat-x;
+  background-image: var(--background);
+  background-attachment:fixed;
+  background-size: cover;
 }
 
 .header {
@@ -49,9 +59,12 @@
 }
 
 .content {
+  margin-inline: auto;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 51px;
+  margin-bottom: 100px;
 }
 
 .card {
@@ -125,9 +138,134 @@
 }
 
 .card__like-button {
-  background-color: transparent;
-  border: 3px solid #000;
-  font-family: var(--accent-font);
   padding: 10px 35px;
+}
+
+.button {
+  background-color: #fff;
+  border: none;
+  outline: 2px solid #000;
+  font-family: var(--accent-font);
   font-size: 14px;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.button:focus-visible {
+  box-shadow: 4px 4px 0 var(--accent-color);
+}
+
+button:hover button::after {
+  content: '';
+  background-color: var(--accent-color);
+  color: #000;
+  position: absolute;
+  inset: 0;
+  
+  /*animation-name: full;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;*/
+}
+
+.content-button {
+  inline-size: clamp(306px, 80%, 335px);
+  margin-inline: auto;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  margin-block: 10px;
+}
+
+.dialog-button-img {
+  inline-size: 28px;
+  background-size: contain;
+  margin-block-start: 15px;
+}
+
+.dialog-img {
+inline-size: 100px;
+}
+
+.dialog {
+ inline-size: 341px;
+ block-size: 191px;
+ padding: 25px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
+
+.dialog[open] .dialog-info {
+  display: flex;
+  gap: 10px;
+}
+
+.dialog-text {
+  grid-column-start: 2;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+.dialog-button {
+  inline-size: 100%;
+  margin-block-start: 20px;
+}
+
+@media (width < 375px) {
+  .header-title-strong {
+    font-size: 40px;
+  }
+  
+  .dialog-text {
+    font-size: 12px;
+  }
+}
+
+.filter-brightness-blur {
+  filter: brightness(80%) blur(1.5px);
+}
+
+.filter-contrast {
+  filter: contrast(1.4)
+}
+
+.filter-blur {
+  filter: blur(1.7px)
+}
+
+.filter-grayscale {
+  filter: grayscale(0.9);
+}
+
+.filter-saturate {
+  filter: saturate(2);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(320deg);
+}
+
+.filter-sepia {
+  filter: sepia(40%);
+}
+
+@media (width > 700px) {
+  .content-button {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .dialog-button-img {
+    margin-block-start: 0;
+    inline-size: 21px;
+  }
 }
