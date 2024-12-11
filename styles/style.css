@@ -12,37 +12,37 @@
 
 @keyframes in {
   from {
-    translate: -100%;
+      translate: -100%;
   }
   to {
-    translate: 0;
+      translate: 0;
   }
 }
 
 @keyframes out {
   from {
-    translate: 0;
+      translate: 0;
   }
   to {
-    translate: -100%;
+      translate: -100%;
   }
 }
 
 @keyframes size {
   from {
-    scale: 1;
+      scale: 1;
   }
   to {
-    scale: 1.25;
+      scale: 1.25;
   }
 }
 
 @keyframes paint {
   from {
-    opacity: 0;
+      opacity: 0;
   }
   to {
-    opacity: 1;
+      opacity: 1;
   }
 }
 
@@ -50,9 +50,9 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: "wght"(var(--main-text-weight));
+  font-variation-settings: "wght" (var(--main-text-weight));
   background-image: var(--background);
-  background-attachment:fixed;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -130,21 +130,17 @@
   font-size: 14px;
   inset-inline-end: clamp(11px, 2vw, 20px);
   padding-top: 26px;
-  mix-blend-mode:hard-light;
-  text-shadow:
-    1px 0 var(--main-color), 
-   0 1px var(--main-color), 
-   1px 0 var(--main-color), 
-   0 -1px var(--main-color);
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 0 var(--main-color), 0 1px var(--main-color), 1px 0 var(--main-color), 0 -1px var(--main-color);
 }
 
-@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .card-picture-teg {
-        -webkit-text-stroke: 1px var(--main-color);
-        text-stroke: 1px var(--main-color);
-        text-shadow: none;
-    }
-} 
+      -webkit-text-stroke: 1px var(--main-color);
+      text-stroke: 1px var(--main-color);
+      text-shadow: none;
+  }
+}
 
 .card-text {
   padding: 26px 25px 0 25px;
@@ -197,7 +193,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   background-color: var(--accent-color);
   position: absolute;
   inset: 0;
@@ -209,7 +205,7 @@
   animation-fill-mode: both;
 }
 
-.button:hover::before  {
+.button:hover::before {
   animation-name: in;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
@@ -233,7 +229,7 @@
 .button:hover .button__text {
   color: var(--main-color);
   transition: 0.5s;
-  background-blend-mode:difference;
+  background-blend-mode: difference;
 }
 
 .core {
@@ -244,17 +240,17 @@
 
 .card__icon-button:hover .core {
   fill: var(--accent-color);
-  transition: fill 0.3s ;
+  transition: fill 0.3s;
 }
 
 .card__icon-button:active .core {
   fill: var(--fill-color);
-  transition: fill 0.3s ;
+  transition: fill 0.3s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--fill-color);
-  transition: fill 0.3s ;
+  transition: fill 0.3s;
 }
 
 .main-body {
@@ -303,7 +299,7 @@
 .button:hover svg {
   filter: invert(100%);
   transition: 0.5s;
-  background-blend-mode:difference;
+  background-blend-mode: difference;
 }
 
 .sparks {
@@ -311,18 +307,18 @@
 }
 
 .dialog-img {
-inline-size: 100px;
+  inline-size: 100px;
 }
 
 .dialog {
- inline-size: 341px;
- block-size: 191px;
- padding: 25px;
+  inline-size: 341px;
+  block-size: 191px;
+  padding: 25px;
 }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
 .dialog[open] .dialog-info {
   display: flex;
@@ -342,26 +338,16 @@ dialog::backdrop {
   margin-block-start: 20px;
 }
 
-@media (width < 375px) {
-  .header-title-strong {
-    font-size: 40px;
-  }
-  
-  .dialog-text {
-    font-size: 12px;
-  }
-}
-
 .filter-brightness-blur {
   filter: brightness(80%) blur(1.5px);
 }
 
 .filter-contrast {
-  filter: contrast(1.4)
+  filter: contrast(1.4);
 }
 
 .filter-blur {
-  filter: blur(1.7px)
+  filter: blur(1.7px);
 }
 
 .filter-grayscale {
@@ -380,17 +366,27 @@ dialog::backdrop {
   filter: sepia(40%);
 }
 
+@media (width < 375px) {
+  .header-title-strong {
+      font-size: 40px;
+  }
+
+  .dialog-text {
+      font-size: 12px;
+  }
+}
+
 @media (width > 700px) {
   .content-button {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
   }
 
   .dialog-button-img {
-    margin-block-start: 0;
-    inline-size: 21px;
+      margin-block-start: 0;
+      inline-size: 21px;
   }
 }
