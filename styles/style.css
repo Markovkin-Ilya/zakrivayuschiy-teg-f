@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, 'Inter', sans-serif);
+  font-family: var(--main-font, "Inter", sans-serif);
   font-variation-settings: "wght" (var(--main-text-weight, 400));
   background-image: var(--background);
   background-attachment: fixed;
@@ -27,7 +27,7 @@
 }
 
 .header-title {
-  font-family: var(--accent-font, 'PressStert2P', sans-serif);
+  font-family: var(--accent-font, "PressStert2P", sans-serif);
   border: 2px solid #000;
   background-color: #fff;
   margin-top: 100px;
@@ -92,7 +92,7 @@
   z-index: 2;
   color: rgb(0, 0, 0);
   opacity: 0.5;
-  font-family: var(--accent-font, 'PressStert2P', sans-serif);
+  font-family: var(--accent-font, "PressStert2P", sans-serif);
   font-size: 14px;
   inset-inline-end: clamp(11px, 2vw, 20px);
   padding-top: 26px;
@@ -118,7 +118,7 @@
   display: flex;
   justify-content: end;
   align-self: center;
-  padding:1px 25px 24px;
+  padding: 1px 25px 24px;
 }
 
 .card__icon-button {
@@ -131,7 +131,6 @@
   justify-content: center;
   align-self: center;
   padding: 0;
-
 }
 
 .card__like-button {
@@ -141,8 +140,8 @@
 
 .button {
   background-color: #fff;
-  border: 2px solid #000; 
-  font-family: var(--accent-font, 'PressStert2P', sans-serif);
+  border: 2px solid #000;
+  font-family: var(--accent-font, "PressStert2P", sans-serif);
   font-size: 14px;
   transition: box-shadow 0.2s;
   position: relative;
@@ -174,11 +173,11 @@
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--accent-font, 'PressStert2P', sans-serif);
+  font-family: var(--accent-font, "PressStert2P", sans-serif);
   transition: 0.5s;
   font-size: 14px;
   margin-block: 10px;
-  mix-blend-mode: difference; 
+  mix-blend-mode: difference;
   color: var(--main-color, #fff);
 }
 
@@ -227,7 +226,7 @@ dialog::backdrop {
 
 .dialog-text {
   grid-column-start: 2;
-  font-family: var(--accent-font, 'PressStert2P', sans-serif);
+  font-family: var(--accent-font, "PressStert2P", sans-serif);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.8em;
@@ -290,8 +289,9 @@ dialog::backdrop {
   }
 
   .dialog {
-    inline-size: 353px;
+      inline-size: 353px;
   }
 }
+
 
 
