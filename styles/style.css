@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, "Inter", sans-serif);
-  font-variation-settings: "wght" (var(--main-text-weight, 400));
+  font-variation-settings: "wght" var(--main-text-weight, 400);
   background-image: var(--background);
   background-attachment: fixed;
   background-size: cover;
@@ -56,7 +56,6 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-  margin-bottom: 100px;
 }
 
 .card {
@@ -67,7 +66,7 @@
 }
 
 .card-title {
-  font-variation-settings: "wght" (var(--card-titele-weight, 700));
+  font-variation-settings: "wght" var(--card-titele-weight, 700);
   font-size: var(--card-titele-size, 18px);
   padding: 5px 10px;
   border-bottom: 2px solid #000;
@@ -131,6 +130,8 @@
   justify-content: center;
   align-self: center;
   padding: 0;
+  transition: outline 0.2s;
+  outline: 2px solid transparent;
 }
 
 .card__like-button {
@@ -168,6 +169,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-block-start: 55px;
+  margin-block-end: 100px;
 }
 
 .button__text {
@@ -199,9 +202,9 @@
 .dialog-button-img {
   position: relative;
   z-index: 2;
-  inline-size: 33px;
-  background-size: contain;
-  margin-block-start: 15px;
+  inline-size: 30px;
+  padding: 0;
+  margin-block-start: 10px;
   mix-blend-mode: difference;
   filter: invert(100%);
 }
@@ -280,7 +283,7 @@ dialog::backdrop {
   .content-button {
       flex-direction: row;
       gap: 5px;
-      padding: 10px;
+      padding: 9px;
   }
 
   .dialog-button-img {
@@ -290,7 +293,10 @@ dialog::backdrop {
 
   .dialog {
       inline-size: 353px;
+      padding: 25px 25px;
   }
+
+ 
 }
 
 
