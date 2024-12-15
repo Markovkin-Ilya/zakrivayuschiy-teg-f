@@ -232,7 +232,7 @@ dialog::backdrop {
   font-family: var(--accent-font, "PressStert2P", sans-serif);
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 1.8em;
+  line-height: 21px;
 }
 
 .dialog-button {
@@ -296,7 +296,9 @@ dialog::backdrop {
       padding: 25px 25px;
   }
 
- 
+  .dialog-text {
+      padding-right:30px ;
+  }
 }
 
 
